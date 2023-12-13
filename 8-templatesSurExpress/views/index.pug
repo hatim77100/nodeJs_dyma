@@ -7,3 +7,25 @@ html(lang="en")
     body 
      h1(class="test") hello
      h2(style="color: red") ADHAM
+    .container 
+        .content 
+            p #{ name }
+            p=name
+            if authenticated
+                p Je suis connecté
+            else
+                p Je ne suis pas connécté
+            case friends
+                when 0
+                    span you have no friend 
+                when 1
+                    span you have one friend
+                default  
+                    span have #{friends} friends
+            each product in products 
+                .product 
+                    h4= product.title 
+                    p #{product.content}
+
+
+
